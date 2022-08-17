@@ -1,0 +1,17 @@
+import os
+#Change file path
+os.chdir("/Users/tom.vincent/Downloads/User Study")
+print(os.getcwd())
+
+dir_list = os.listdir()
+print(dir_list)
+for dir in dir_list:
+    print(dir)
+    #Change file path here as well
+    os.chdir("/Users/tom.vincent/Downloads/User Study/"+dir+"/")
+    print(os.getcwd())
+    child_dir_list = os.listdir()
+    for child_dir in child_dir_list:
+        print(child_dir)
+        os.rename(child_dir,child_dir+"_"+dir)
+    print(os.listdir())
