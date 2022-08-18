@@ -1,0 +1,18 @@
+import os
+
+os.chdir("/Users/tom.vincent/Downloads/User Study")
+print(os.getcwd())
+
+dir_list = os.listdir()
+print(dir_list)
+for dir in dir_list:
+    print(dir)
+    os.chdir("/Users/tom.vincent/Downloads/User Study/"+dir+"/")
+    print(os.getcwd())
+    child_dir_list = os.listdir()
+    for child_dir in child_dir_list:
+        print(child_dir)
+        size = len(child_dir)
+        mod_string = child_dir[:size - 7]
+        os.rename(child_dir,mod_string)
+    print(os.listdir())
