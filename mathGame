@@ -1,0 +1,8 @@
+
+a=int(input("No matter what value you enter, the system would be able to guess you end result. Try now!! \nEnter a number\n"))
+input("Multiply the number by 2 in your mind, press Enter to continue")
+input("Now, add 30 to the result.Press Enter to continue")
+input("After adding 30, divide the whole number by 2. Press Enter to continue")
+input("Finally, subtract the number that you had initially entered. Press Enter to continue")
+a=((((a*2)+30)/2))-a
+print("\n\nCaught you!! Isn't the result", a ,"?")
